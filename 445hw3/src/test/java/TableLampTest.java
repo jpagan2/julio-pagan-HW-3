@@ -11,19 +11,19 @@ import main.java.light.*;
 
 public class TableLampTest {
     // String fixtures
-    private final static String TABLE_LAMP_ON_WITH_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
-    private final static String TABLE_LAMP_OFF_WITH_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
+    private final static String T_LAMP_ON_W_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
+    private final static String T_LAMP_OFF_W_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
 
-    private final static String TABLE_LAMP_ON_WITH_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
-    private final static String TABLE_LAMP_OFF_WITH_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
+    private final static String T_LAMP_ON_W_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
+    private final static String T_LAMP_OFF_W_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT;
 
 
     static {
-    	TABLE_LAMP_ON_WITH_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "Button switched to ON!\nLightbulb on";
-    	TABLE_LAMP_OFF_WITH_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "Button switched to OFF!\nLightbulb off";
+    	T_LAMP_ON_W_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "Button switched to ON!\nLightbulb on";
+    	T_LAMP_OFF_W_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "Button switched to OFF!\nLightbulb off";
 
-    	TABLE_LAMP_ON_WITH_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "PushDownButton switched to ON!\nLightbulb on";
-    	TABLE_LAMP_OFF_WITH_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "PushDownButton switched to OFF!\nLightbulb off";
+    	T_LAMP_ON_W_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "PushDownButton switched to ON!\nLightbulb on";
+    	T_LAMP_OFF_W_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT = "PushDownButton switched to OFF!\nLightbulb off";
 
     }
 
@@ -32,7 +32,7 @@ public class TableLampTest {
         SwitchOnOff button = new Button();
         SwitchLight lightBulb = new Lightbulb();
         TableLamp tableLamp = new TableLamp(button, lightBulb);
-        assertEquals(TABLE_LAMP_ON_WITH_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOnOut());
+        assertEquals(T_LAMP_ON_W_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOnOut());
     }
 
     @Test
@@ -40,7 +40,7 @@ public class TableLampTest {
     	SwitchOnOff button = new Button();
     	SwitchLight lightBulb = new Lightbulb();
         TableLamp tableLamp = new TableLamp(button, lightBulb);
-        assertEquals(TABLE_LAMP_OFF_WITH_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOffOut());
+        assertEquals(T_LAMP_OFF_W_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOffOut());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class TableLampTest {
     	SwitchOnOff button = new PushdownButton();
         SwitchLight lightBulb = new Lightbulb();
         TableLamp tableLamp = new TableLamp(button, lightBulb);
-        assertEquals(TABLE_LAMP_ON_WITH_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOnOut());
+        assertEquals(T_LAMP_ON_W_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOnOut());
     }
 
     @Test
@@ -56,6 +56,6 @@ public class TableLampTest {
     	SwitchOnOff button = new PushdownButton();
     	SwitchLight lightBulb = new Lightbulb();
         TableLamp tableLamp = new TableLamp(button, lightBulb);
-        assertEquals(TABLE_LAMP_OFF_WITH_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOffOut());
+        assertEquals(T_LAMP_OFF_W_PUSH_DOWN_BUTTON_AND_LIGHT_BULB_EXPECTED_OUT, tableLamp.getTableLampOffOut());
     }
 }
